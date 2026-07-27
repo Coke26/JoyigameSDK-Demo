@@ -1,0 +1,39 @@
+name: JoyigameSDKDemo
+options:
+  bundleIdPrefix: com.joyigame.sdk
+  deploymentTarget:
+    iOS: "13.0"
+configs:
+  Debug: debug
+  Release: release
+settings:
+  base:
+    CLANG_ENABLE_OBJC_ARC: YES
+    IPHONEOS_DEPLOYMENT_TARGET: "13.0"
+targets:
+  JoyigameSDKDemo:
+    type: application
+    platform: iOS
+    sources:
+      - JoyigameSDKDemo
+    settings:
+      base:
+        ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: YES
+        CLANG_CXX_LIBRARY: libc++
+        INFOPLIST_FILE: JoyigameSDKDemo/Info.plist
+        LD_RUNPATH_SEARCH_PATHS:
+          - "$(inherited)"
+          - "@executable_path/Frameworks"
+          - "/usr/lib/swift"
+        OTHER_LDFLAGS:
+          - "$(inherited)"
+          - "-ObjC"
+        SWIFT_VERSION: "5.0"
+        PRODUCT_BUNDLE_IDENTIFIER: com.joyigame.sdk.demo
+  JoyigameSDKDemoIntegrationTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - JoyigameSDKDemoIntegrationTests
+    dependencies:
+      - target: JoyigameSDKDemo

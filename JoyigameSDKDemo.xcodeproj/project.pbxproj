@@ -1,0 +1,448 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14C165CD1C19FE973D214109 /* JOYDemoActivationConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 63390BD8D37932749F030C43 /* JOYDemoActivationConfig.m */; };
+		2FFF8D9097D1BCE906481854 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFE0AD71A887B501EE9C0D6 /* main.m */; };
+		5B3D8ECD13D6CE31982447E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4DB6D576F415549E9ACF989 /* LaunchScreen.storyboard */; };
+		8A5A187C7D0FA9745D553B88 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E56B6363A547FEBABB1A1E /* File.swift */; };
+		9429FA548FF4CD996ACAE639 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A750F15DB69E8D9012FDEEB6 /* AppDelegate.m */; };
+		97FCD8838645CFE484DC83D8 /* JOYDemoLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E512FBDF0D482920286CC402 /* JOYDemoLoginViewController.m */; };
+		BD1D41E2025E614C19F82AB5 /* JoyigameSDKDemoIntegrationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BA6D3EFFA8CF1D13AAF553 /* JoyigameSDKDemoIntegrationTests.m */; };
+		BE3DEA6EC56FEF3392775A51 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DABAD22590248049CDD04E /* ViewController.m */; };
+		EAA797AEBBDBF4396EAF48A0 /* JOYDemoPaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A87B962AE4C15BD4EF2E6D30 /* JOYDemoPaymentViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04469D8ABAD33E02ED4978F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8A2C2D7AC3AA51A0B8F41EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71A77AF4D419ADFC14C28C0E;
+			remoteInfo = JoyigameSDKDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0435977CFB4663A1AD062581 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		170AB32867127F962D9205BE /* JoyigameSDKDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JoyigameSDKDemo.entitlements; sourceTree = "<group>"; };
+		1EFE0AD71A887B501EE9C0D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		20BA6D3EFFA8CF1D13AAF553 /* JoyigameSDKDemoIntegrationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JoyigameSDKDemoIntegrationTests.m; sourceTree = "<group>"; };
+		21E56B6363A547FEBABB1A1E /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		3ADC72D26996DAB5EE07000E /* JOYDemoActivationConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JOYDemoActivationConfig.h; sourceTree = "<group>"; };
+		49F7B541784B7A088B129322 /* JOYDemoPaymentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JOYDemoPaymentViewController.h; sourceTree = "<group>"; };
+		5A28FA426BC29096C1911BA4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		63390BD8D37932749F030C43 /* JOYDemoActivationConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JOYDemoActivationConfig.m; sourceTree = "<group>"; };
+		783554C54B7894A36E81BDD8 /* JoyigameSDKDemoIntegrationTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = JoyigameSDKDemoIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FB4C8203CFDEEF8C5C0CB87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A0DABAD22590248049CDD04E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A750F15DB69E8D9012FDEEB6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A87B962AE4C15BD4EF2E6D30 /* JOYDemoPaymentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JOYDemoPaymentViewController.m; sourceTree = "<group>"; };
+		B85B96D53433FC37B59C21A7 /* JoyigameSDKDemo.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = JoyigameSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4DB6D576F415549E9ACF989 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E512FBDF0D482920286CC402 /* JOYDemoLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JOYDemoLoginViewController.m; sourceTree = "<group>"; };
+		FB8F7A31F901C310C1573F17 /* JOYDemoLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JOYDemoLoginViewController.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		23692B4B27103E42A7FA703A = {
+			isa = PBXGroup;
+			children = (
+				52D77767D26CBA620E93A038 /* JoyigameSDKDemo */,
+				A267B5C2353C74273FEA487B /* JoyigameSDKDemoIntegrationTests */,
+				2B34CE620482D7872CE4EB89 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2B34CE620482D7872CE4EB89 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B85B96D53433FC37B59C21A7 /* JoyigameSDKDemo.app */,
+				783554C54B7894A36E81BDD8 /* JoyigameSDKDemoIntegrationTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52D77767D26CBA620E93A038 /* JoyigameSDKDemo */ = {
+			isa = PBXGroup;
+			children = (
+				5A28FA426BC29096C1911BA4 /* AppDelegate.h */,
+				A750F15DB69E8D9012FDEEB6 /* AppDelegate.m */,
+				21E56B6363A547FEBABB1A1E /* File.swift */,
+				9FB4C8203CFDEEF8C5C0CB87 /* Info.plist */,
+				3ADC72D26996DAB5EE07000E /* JOYDemoActivationConfig.h */,
+				63390BD8D37932749F030C43 /* JOYDemoActivationConfig.m */,
+				49F7B541784B7A088B129322 /* JOYDemoPaymentViewController.h */,
+				A87B962AE4C15BD4EF2E6D30 /* JOYDemoPaymentViewController.m */,
+				FB8F7A31F901C310C1573F17 /* JOYDemoLoginViewController.h */,
+				E512FBDF0D482920286CC402 /* JOYDemoLoginViewController.m */,
+				170AB32867127F962D9205BE /* JoyigameSDKDemo.entitlements */,
+				C4DB6D576F415549E9ACF989 /* LaunchScreen.storyboard */,
+				1EFE0AD71A887B501EE9C0D6 /* main.m */,
+				0435977CFB4663A1AD062581 /* ViewController.h */,
+				A0DABAD22590248049CDD04E /* ViewController.m */,
+			);
+			path = JoyigameSDKDemo;
+			sourceTree = "<group>";
+		};
+		A267B5C2353C74273FEA487B /* JoyigameSDKDemoIntegrationTests */ = {
+			isa = PBXGroup;
+			children = (
+				20BA6D3EFFA8CF1D13AAF553 /* JoyigameSDKDemoIntegrationTests.m */,
+			);
+			path = JoyigameSDKDemoIntegrationTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		71A77AF4D419ADFC14C28C0E /* JoyigameSDKDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34614833A1697CE51371C506 /* Build configuration list for PBXNativeTarget "JoyigameSDKDemo" */;
+			buildPhases = (
+				A68AA4C0A368B6E701287E4B /* Sources */,
+				2C9F4BD1878E9F7A8BBF0E0E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JoyigameSDKDemo;
+			packageProductDependencies = (
+			);
+			productName = JoyigameSDKDemo;
+			productReference = B85B96D53433FC37B59C21A7 /* JoyigameSDKDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B53CE3099BBB0BD5951F5538 /* JoyigameSDKDemoIntegrationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6498EA80755C7EBEDD1F891 /* Build configuration list for PBXNativeTarget "JoyigameSDKDemoIntegrationTests" */;
+			buildPhases = (
+				A8DA97321213110E8A9B81A5 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E228226FE478AA46CE9280BF /* PBXTargetDependency */,
+			);
+			name = JoyigameSDKDemoIntegrationTests;
+			packageProductDependencies = (
+			);
+			productName = JoyigameSDKDemoIntegrationTests;
+			productReference = 783554C54B7894A36E81BDD8 /* JoyigameSDKDemoIntegrationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F8A2C2D7AC3AA51A0B8F41EF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = 5D2599CADB2115253F0238E7 /* Build configuration list for PBXProject "JoyigameSDKDemo" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 23692B4B27103E42A7FA703A;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 2B34CE620482D7872CE4EB89 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				71A77AF4D419ADFC14C28C0E /* JoyigameSDKDemo */,
+				B53CE3099BBB0BD5951F5538 /* JoyigameSDKDemoIntegrationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2C9F4BD1878E9F7A8BBF0E0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B3D8ECD13D6CE31982447E0 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A68AA4C0A368B6E701287E4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9429FA548FF4CD996ACAE639 /* AppDelegate.m in Sources */,
+				8A5A187C7D0FA9745D553B88 /* File.swift in Sources */,
+				14C165CD1C19FE973D214109 /* JOYDemoActivationConfig.m in Sources */,
+				EAA797AEBBDBF4396EAF48A0 /* JOYDemoPaymentViewController.m in Sources */,
+				97FCD8838645CFE484DC83D8 /* JOYDemoLoginViewController.m in Sources */,
+				BE3DEA6EC56FEF3392775A51 /* ViewController.m in Sources */,
+				2FFF8D9097D1BCE906481854 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8DA97321213110E8A9B81A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD1D41E2025E614C19F82AB5 /* JoyigameSDKDemoIntegrationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E228226FE478AA46CE9280BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71A77AF4D419ADFC14C28C0E /* JoyigameSDKDemo */;
+			targetProxy = 04469D8ABAD33E02ED4978F7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		029F78A4A56E7C9E1DEB0FC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		14C2884E4F32FB185734B1A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = JoyigameSDKDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					/usr/lib/swift,
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.joyigame.sdk.demo;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7E1F0537659801DBC4914EF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.joyigame.sdk.JoyigameSDKDemoIntegrationTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JoyigameSDKDemo.app/JoyigameSDKDemo";
+			};
+			name = Debug;
+		};
+		9DE8E4E889906507272E1DDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = JoyigameSDKDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					/usr/lib/swift,
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.joyigame.sdk.demo;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F7A6D3A2086B71A5CC4EDA17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F9563A4FE73198F31AEDC505 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.joyigame.sdk.JoyigameSDKDemoIntegrationTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JoyigameSDKDemo.app/JoyigameSDKDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		34614833A1697CE51371C506 /* Build configuration list for PBXNativeTarget "JoyigameSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DE8E4E889906507272E1DDD /* Debug */,
+				14C2884E4F32FB185734B1A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5D2599CADB2115253F0238E7 /* Build configuration list for PBXProject "JoyigameSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				029F78A4A56E7C9E1DEB0FC8 /* Debug */,
+				F7A6D3A2086B71A5CC4EDA17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A6498EA80755C7EBEDD1F891 /* Build configuration list for PBXNativeTarget "JoyigameSDKDemoIntegrationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E1F0537659801DBC4914EF2 /* Debug */,
+				F9563A4FE73198F31AEDC505 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F8A2C2D7AC3AA51A0B8F41EF /* Project object */;
+}
