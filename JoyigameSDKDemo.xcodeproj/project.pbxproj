@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14C165CD1C19FE973D214109 /* JOYDemoActivationConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 63390BD8D37932749F030C43 /* JOYDemoActivationConfig.m */; };
+		120D30A1D7977DBAA1550B1B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA05386B6CCFD1B6287A5E26 /* Accelerate.framework */; };
+		2E38BF3A1B707D4A38AC32AB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0EF112DB586A534BFAF00AE1 /* InfoPlist.strings */; };
 		2FFF8D9097D1BCE906481854 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFE0AD71A887B501EE9C0D6 /* main.m */; };
 		5B3D8ECD13D6CE31982447E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4DB6D576F415549E9ACF989 /* LaunchScreen.storyboard */; };
+		7438E649B147B41F33720FAB /* libc++abi.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E4154B112AB32B26FC4C8D /* libc++abi.tbd */; };
 		8A5A187C7D0FA9745D553B88 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E56B6363A547FEBABB1A1E /* File.swift */; };
 		9429FA548FF4CD996ACAE639 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A750F15DB69E8D9012FDEEB6 /* AppDelegate.m */; };
-		97FCD8838645CFE484DC83D8 /* JOYDemoLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E512FBDF0D482920286CC402 /* JOYDemoLoginViewController.m */; };
+		97FCD8838645CFE484DC83D8 /* JOYDemoTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E512FBDF0D482920286CC402 /* JOYDemoTestViewController.m */; };
+		ADD36057F89F085665B4B7A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B36B13CB90E06CA71356E6C3 /* Assets.xcassets */; };
 		BD1D41E2025E614C19F82AB5 /* JoyigameSDKDemoIntegrationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BA6D3EFFA8CF1D13AAF553 /* JoyigameSDKDemoIntegrationTests.m */; };
 		BE3DEA6EC56FEF3392775A51 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DABAD22590248049CDD04E /* ViewController.m */; };
+		C4F06A9AE3B5AEF60C1241B0 /* Pods_JoyigameSDKDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD88CDB475439E760198BC79 /* Pods_JoyigameSDKDemo.framework */; };
 		EAA797AEBBDBF4396EAF48A0 /* JOYDemoPaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A87B962AE4C15BD4EF2E6D30 /* JOYDemoPaymentViewController.m */; };
+		F632F03B2C83CE8B46E9F03B /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9327A51309324A474AC958CF /* libc++.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,21 +38,45 @@
 		170AB32867127F962D9205BE /* JoyigameSDKDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JoyigameSDKDemo.entitlements; sourceTree = "<group>"; };
 		1EFE0AD71A887B501EE9C0D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		20BA6D3EFFA8CF1D13AAF553 /* JoyigameSDKDemoIntegrationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JoyigameSDKDemoIntegrationTests.m; sourceTree = "<group>"; };
+		2195E25A02562ED375270CAD /* Pods-JoyigameSDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JoyigameSDKDemo.debug.xcconfig"; path = "Target Support Files/Pods-JoyigameSDKDemo/Pods-JoyigameSDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		21E56B6363A547FEBABB1A1E /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		3ADC72D26996DAB5EE07000E /* JOYDemoActivationConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JOYDemoActivationConfig.h; sourceTree = "<group>"; };
+		448B52F5989F536368B81130 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		49F7B541784B7A088B129322 /* JOYDemoPaymentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JOYDemoPaymentViewController.h; sourceTree = "<group>"; };
 		5A28FA426BC29096C1911BA4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		63390BD8D37932749F030C43 /* JOYDemoActivationConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JOYDemoActivationConfig.m; sourceTree = "<group>"; };
 		783554C54B7894A36E81BDD8 /* JoyigameSDKDemoIntegrationTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = JoyigameSDKDemoIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9327A51309324A474AC958CF /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		9FB4C8203CFDEEF8C5C0CB87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A0DABAD22590248049CDD04E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A750F15DB69E8D9012FDEEB6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A7F5570A897501A02D65607D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A87B962AE4C15BD4EF2E6D30 /* JOYDemoPaymentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JOYDemoPaymentViewController.m; sourceTree = "<group>"; };
+		AB2313EE4ED307241D1AC7A8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		B36B13CB90E06CA71356E6C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B85B96D53433FC37B59C21A7 /* JoyigameSDKDemo.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = JoyigameSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA05386B6CCFD1B6287A5E26 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		BC91AB18291549A24366702F /* Pods-JoyigameSDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JoyigameSDKDemo.release.xcconfig"; path = "Target Support Files/Pods-JoyigameSDKDemo/Pods-JoyigameSDKDemo.release.xcconfig"; sourceTree = "<group>"; };
+		C05F703D8EA72CF084F3EB51 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C4DB6D576F415549E9ACF989 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E512FBDF0D482920286CC402 /* JOYDemoLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JOYDemoLoginViewController.m; sourceTree = "<group>"; };
-		FB8F7A31F901C310C1573F17 /* JOYDemoLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JOYDemoLoginViewController.h; sourceTree = "<group>"; };
+		E512FBDF0D482920286CC402 /* JOYDemoTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JOYDemoTestViewController.m; sourceTree = "<group>"; };
+		F1E4154B112AB32B26FC4C8D /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
+		FB8F7A31F901C310C1573F17 /* JOYDemoTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JOYDemoTestViewController.h; sourceTree = "<group>"; };
+		FD88CDB475439E760198BC79 /* Pods_JoyigameSDKDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JoyigameSDKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04640D8BE763FADAB9D8CF47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F632F03B2C83CE8B46E9F03B /* libc++.tbd in Frameworks */,
+				7438E649B147B41F33720FAB /* libc++abi.tbd in Frameworks */,
+				120D30A1D7977DBAA1550B1B /* Accelerate.framework in Frameworks */,
+				C4F06A9AE3B5AEF60C1241B0 /* Pods_JoyigameSDKDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		23692B4B27103E42A7FA703A = {
@@ -55,7 +84,9 @@
 			children = (
 				52D77767D26CBA620E93A038 /* JoyigameSDKDemo */,
 				A267B5C2353C74273FEA487B /* JoyigameSDKDemoIntegrationTests */,
+				5AC7559844B455876A9AE9BA /* Frameworks */,
 				2B34CE620482D7872CE4EB89 /* Products */,
+				78F2E7458BDF6EB1C0E01E2D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,21 +104,43 @@
 			children = (
 				5A28FA426BC29096C1911BA4 /* AppDelegate.h */,
 				A750F15DB69E8D9012FDEEB6 /* AppDelegate.m */,
+				B36B13CB90E06CA71356E6C3 /* Assets.xcassets */,
 				21E56B6363A547FEBABB1A1E /* File.swift */,
 				9FB4C8203CFDEEF8C5C0CB87 /* Info.plist */,
 				3ADC72D26996DAB5EE07000E /* JOYDemoActivationConfig.h */,
-				63390BD8D37932749F030C43 /* JOYDemoActivationConfig.m */,
 				49F7B541784B7A088B129322 /* JOYDemoPaymentViewController.h */,
 				A87B962AE4C15BD4EF2E6D30 /* JOYDemoPaymentViewController.m */,
-				FB8F7A31F901C310C1573F17 /* JOYDemoLoginViewController.h */,
-				E512FBDF0D482920286CC402 /* JOYDemoLoginViewController.m */,
+				FB8F7A31F901C310C1573F17 /* JOYDemoTestViewController.h */,
+				E512FBDF0D482920286CC402 /* JOYDemoTestViewController.m */,
 				170AB32867127F962D9205BE /* JoyigameSDKDemo.entitlements */,
 				C4DB6D576F415549E9ACF989 /* LaunchScreen.storyboard */,
 				1EFE0AD71A887B501EE9C0D6 /* main.m */,
 				0435977CFB4663A1AD062581 /* ViewController.h */,
 				A0DABAD22590248049CDD04E /* ViewController.m */,
+				0EF112DB586A534BFAF00AE1 /* InfoPlist.strings */,
 			);
 			path = JoyigameSDKDemo;
+			sourceTree = "<group>";
+		};
+		5AC7559844B455876A9AE9BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA05386B6CCFD1B6287A5E26 /* Accelerate.framework */,
+				9327A51309324A474AC958CF /* libc++.tbd */,
+				F1E4154B112AB32B26FC4C8D /* libc++abi.tbd */,
+				FD88CDB475439E760198BC79 /* Pods_JoyigameSDKDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		78F2E7458BDF6EB1C0E01E2D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2195E25A02562ED375270CAD /* Pods-JoyigameSDKDemo.debug.xcconfig */,
+				BC91AB18291549A24366702F /* Pods-JoyigameSDKDemo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		A267B5C2353C74273FEA487B /* JoyigameSDKDemoIntegrationTests */ = {
@@ -105,16 +158,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34614833A1697CE51371C506 /* Build configuration list for PBXNativeTarget "JoyigameSDKDemo" */;
 			buildPhases = (
+				C4AD2227A0E5684F1D4C0649 /* [CP] Check Pods Manifest.lock */,
 				A68AA4C0A368B6E701287E4B /* Sources */,
 				2C9F4BD1878E9F7A8BBF0E0E /* Resources */,
+				04640D8BE763FADAB9D8CF47 /* Frameworks */,
+				429D4E0F36E8C1681A4A609E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = JoyigameSDKDemo;
-			packageProductDependencies = (
-			);
 			productName = JoyigameSDKDemo;
 			productReference = B85B96D53433FC37B59C21A7 /* JoyigameSDKDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -131,8 +185,6 @@
 				E228226FE478AA46CE9280BF /* PBXTargetDependency */,
 			);
 			name = JoyigameSDKDemoIntegrationTests;
-			packageProductDependencies = (
-			);
 			productName = JoyigameSDKDemoIntegrationTests;
 			productReference = 783554C54B7894A36E81BDD8 /* JoyigameSDKDemoIntegrationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -154,6 +206,9 @@
 			knownRegions = (
 				Base,
 				en,
+				ko,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = 23692B4B27103E42A7FA703A;
 			minimizedProjectReferenceProxies = 1;
@@ -173,11 +228,55 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADD36057F89F085665B4B7A2 /* Assets.xcassets in Resources */,
+				2E38BF3A1B707D4A38AC32AB /* InfoPlist.strings in Resources */,
 				5B3D8ECD13D6CE31982447E0 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		429D4E0F36E8C1681A4A609E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JoyigameSDKDemo/Pods-JoyigameSDKDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JoyigameSDKDemo/Pods-JoyigameSDKDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JoyigameSDKDemo/Pods-JoyigameSDKDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4AD2227A0E5684F1D4C0649 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JoyigameSDKDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A68AA4C0A368B6E701287E4B /* Sources */ = {
@@ -186,9 +285,8 @@
 			files = (
 				9429FA548FF4CD996ACAE639 /* AppDelegate.m in Sources */,
 				8A5A187C7D0FA9745D553B88 /* File.swift in Sources */,
-				14C165CD1C19FE973D214109 /* JOYDemoActivationConfig.m in Sources */,
 				EAA797AEBBDBF4396EAF48A0 /* JOYDemoPaymentViewController.m in Sources */,
-				97FCD8838645CFE484DC83D8 /* JOYDemoLoginViewController.m in Sources */,
+				97FCD8838645CFE484DC83D8 /* JOYDemoTestViewController.m in Sources */,
 				BE3DEA6EC56FEF3392775A51 /* ViewController.m in Sources */,
 				2FFF8D9097D1BCE906481854 /* main.m in Sources */,
 			);
@@ -211,6 +309,20 @@
 			targetProxy = 04469D8ABAD33E02ED4978F7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0EF112DB586A534BFAF00AE1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7F5570A897501A02D65607D /* en */,
+				C05F703D8EA72CF084F3EB51 /* ko */,
+				AB2313EE4ED307241D1AC7A8 /* zh-Hans */,
+				448B52F5989F536368B81130 /* zh-Hant */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		029F78A4A56E7C9E1DEB0FC8 /* Debug */ = {
@@ -278,10 +390,12 @@
 		};
 		14C2884E4F32FB185734B1A5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC91AB18291549A24366702F /* Pods-JoyigameSDKDemo.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_ENTITLEMENTS = JoyigameSDKDemo/JoyigameSDKDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = JoyigameSDKDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -293,7 +407,7 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.joyigame.sdk.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.joyigame.demo;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -309,7 +423,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.joyigame.sdk.JoyigameSDKDemoIntegrationTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.JoyigameSDKDemoIntegrationTests;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JoyigameSDKDemo.app/JoyigameSDKDemo";
@@ -318,10 +432,12 @@
 		};
 		9DE8E4E889906507272E1DDD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2195E25A02562ED375270CAD /* Pods-JoyigameSDKDemo.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_ENTITLEMENTS = JoyigameSDKDemo/JoyigameSDKDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = JoyigameSDKDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -333,7 +449,7 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.joyigame.sdk.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.joyigame.demo;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -405,7 +521,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.joyigame.sdk.JoyigameSDKDemoIntegrationTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.JoyigameSDKDemoIntegrationTests;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JoyigameSDKDemo.app/JoyigameSDKDemo";

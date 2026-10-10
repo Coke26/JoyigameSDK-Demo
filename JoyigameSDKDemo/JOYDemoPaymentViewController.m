@@ -6,7 +6,7 @@
 @property (nonatomic, copy) NSString *displayName;
 @property (nonatomic, copy) NSString *productId;
 @property (nonatomic, copy) NSString *appleProductId;
-@property (nonatomic, copy) NSString *money;
+@property (nonatomic, strong) NSNumber *money;
 @property (nonatomic, copy) NSString *currency;
 @property (nonatomic, copy) NSString *storeDisplayPrice;
 @property (nonatomic, copy) NSString *storeCodeStylePrice;
@@ -40,17 +40,17 @@
 
 - (NSArray<JOYDemoPaymentItem *> *)buildPaymentItems {
     return @[
-        [self itemWithDisplayName:@"6 元" productId:@"joyi_test_6" appleProductId:@"com.joyigame.demo.pay6" money:@"6"],
-        [self itemWithDisplayName:@"30 元" productId:@"joyi_test_30" appleProductId:@"com.joyigame.demo.pay30" money:@"30"],
-        [self itemWithDisplayName:@"68 元" productId:@"joyi_test_68" appleProductId:@"com.joyigame.demo.pay68" money:@"68"],
-        [self itemWithDisplayName:@"128 元" productId:@"joyi_test_128" appleProductId:@"com.joyigame.demo.pay128" money:@"128"],
+        [self itemWithDisplayName:@"6 元" productId:@"demo_product_6" appleProductId:@"com.example.demo.pay6" money:@6],
+        [self itemWithDisplayName:@"30 元" productId:@"demo_product_30" appleProductId:@"com.example.demo.pay30" money:@30],
+        [self itemWithDisplayName:@"68 元" productId:@"demo_product_68" appleProductId:@"com.example.demo.pay68" money:@68],
+        [self itemWithDisplayName:@"128 元" productId:@"demo_product_128" appleProductId:@"com.example.demo.pay128" money:@128],
     ];
 }
 
 - (JOYDemoPaymentItem *)itemWithDisplayName:(NSString *)displayName
                                   productId:(NSString *)productId
                              appleProductId:(NSString *)appleProductId
-                                      money:(NSString *)money {
+                                      money:(NSNumber *)money {
     JOYDemoPaymentItem *item = [[JOYDemoPaymentItem alloc] init];
     item.displayName = displayName;
     item.productId = productId;
@@ -196,22 +196,22 @@
           item.money,
           item.currency);
 
-    JOYPurchaseRequest *request = [[JOYPurchaseRequest alloc] init];
-    request.productId = item.productId;
-    request.appleProductId = item.appleProductId;
-    request.productName = [NSString stringWithFormat:@"%@档", item.displayName];
-    request.money = item.money;
-    request.currency = item.currency;
-    request.clientOrderId = [NSString stringWithFormat:@"demo_%.0f", NSDate.date.timeIntervalSince1970];
-    request.serverId = @"demo_server_1";
-    request.serverName = @"Demo 服务器";
-    request.roleId = @"demo_role_1";
-    request.roleName = @"Demo 角色";
-    request.roleLevel = @"1";
-    request.extendsInfoData = @"demo_extends";
-    request.partner = @"3"; // 苹果支付
+    JOYPaymentInfo *paymentInfo = [[JOYPaymentInfo alloc] init];
+    paymentInfo.productId = item.productId;
+    paymentInfo.appleProductId = item.appleProductId;
+    paymentInfo.productName = [NSString stringWithFormat:@"%@档", item.displayName];
+    paymentInfo.money = item.money;
+    paymentInfo.currency = item.currency;
+    paymentInfo.clientOrderId = [NSString stringWithFormat:@"demo_%.0f", NSDate.date.timeIntervalSince1970];
+    paymentInfo.serverId = @"demo_server_1";
+    paymentInfo.serverName = @"Demo 服务器";
+    paymentInfo.roleId = @"demo_role_1";
+    paymentInfo.roleName = @"Demo 角色";
+    paymentInfo.roleLevel = @"1";
+    paymentInfo.vipLevel = @"0";
+    paymentInfo.extendsInfoData = @"demo_extends";
 
-    [[JOYSDKCenter sharedCenter] payWithPaymentInfo:request completion:^(JOYPurchaseResult *result, NSError *error) {
+    [[JOYSDKCenter sharedCenter] payWithPaymentInfo:paymentInfo completion:^(JOYPurchaseResult *result, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             sender.enabled = YES;
             if (error) {

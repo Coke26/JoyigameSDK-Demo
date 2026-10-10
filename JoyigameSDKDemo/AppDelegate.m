@@ -1,6 +1,6 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
-#import "JOYDemoLoginViewController.h"
+#import "JOYDemoTestViewController.h"
 #import "JOYDemoPaymentViewController.h"
 #import "JOYDemoActivationConfig.h"
 #import <JoyigameSDK/JoyigameSDK.h>
@@ -28,28 +28,26 @@
                                                                      image:nil
                                                              selectedImage:nil];
 
-    JOYDemoLoginViewController *loginViewController = [[JOYDemoLoginViewController alloc] init];
-    loginViewController.title = @"登录";
-    loginViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"登录"
+    JOYDemoTestViewController *testViewController = [[JOYDemoTestViewController alloc] init];
+    testViewController.title = @"登录";
+    testViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"登录"
                                                                   image:nil
                                                           selectedImage:nil];
 
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    tabBarController.viewControllers = @[activationViewController, loginViewController, paymentViewController];
+    tabBarController.viewControllers = @[activationViewController, testViewController , paymentViewController ];
     return tabBarController;
 }
 
 - (void)startJoyigameSDKActivation {
     if (!JOYDemoActivationConfigurationIsReady()) {
-        NSError *error = [NSError errorWithDomain:@"com.joyigame.sdk.demo"
-                                             code:1001
-                                         userInfo:@{NSLocalizedDescriptionKey: @"请先在 JoyigameSDKDemo/Info.plist 填写 JOYGameId 和 JOYAppKey"}];
-        NSLog(@"[JoyigameSDKDemo] %@", error.localizedDescription);
-        [[NSNotificationCenter defaultCenter] postNotificationName:JOYDemoActivationDidFinishNotification
-                                                            object:nil
-                                                          userInfo:@{ @"error": error }];
+        NSLog(@"[JoyigameSDKDemo] 请在 Info.plist 填写 JOYGameId 和 JOYAppKey");
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self presentConfigurationRequiredAlert];
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"需要配置 SDK 参数"
+                message:@"请在 Info.plist 填写 JOYGameId 和 JOYAppKey 后重新运行。"
+                preferredStyle:UIAlertControllerStyleAlert];
+            [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil]];
+            [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
         });
         return;
     }
@@ -74,15 +72,21 @@
         [[NSNotificationCenter defaultCenter] postNotificationName:JOYDemoActivationDidFinishNotification
                                                             object:nil
                                                           userInfo:@{@"config": config}];
+        [self startJoyigameSDKLoginAfterActivation];
     }];
 }
 
-- (void)presentConfigurationRequiredAlert {
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"需要配置 SDK 参数"
-                                                                             message:@"请在 JoyigameSDKDemo/Info.plist 填写 JOYGameId 和 JOYAppKey，然后重新运行 Demo。"
-                                                                      preferredStyle:UIAlertControllerStyleAlert];
-    [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil]];
-    [self.window.rootViewController presentViewController:alertController animated:YES completion:nil];
+- (void)startJoyigameSDKLoginAfterActivation {
+    // Demo 启动链路模拟游戏工程：激活成功后立即交给 SDK 决定自动登录或展示登录页。
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[JOYSDKCenter sharedCenter] startLoginWithCompletion:^(JOYSDKLoginResult * _Nullable result, NSError * _Nullable error) {
+            if (error) {
+                NSLog(@"[JoyigameSDKDemo] 启动登录未完成: %@", error.localizedDescription ?: error);
+                return;
+            }
+            NSLog(@"[JoyigameSDKDemo] 启动登录成功: uid=%@ username=%@", result.uid ?: @"", result.username ?: @"");
+        }];
+    });
 }
 
 - (BOOL)application:(UIApplication *)application

@@ -1,6 +1,6 @@
 name: JoyigameSDKDemo
 options:
-  bundleIdPrefix: com.joyigame.sdk
+  bundleIdPrefix: com.example
   deploymentTarget:
     iOS: "13.0"
 configs:
@@ -19,8 +19,10 @@ targets:
     settings:
       base:
         ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: YES
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         CLANG_CXX_LIBRARY: libc++
         INFOPLIST_FILE: JoyigameSDKDemo/Info.plist
+        CODE_SIGN_ENTITLEMENTS: JoyigameSDKDemo/JoyigameSDKDemo.entitlements
         LD_RUNPATH_SEARCH_PATHS:
           - "$(inherited)"
           - "@executable_path/Frameworks"
@@ -29,7 +31,11 @@ targets:
           - "$(inherited)"
           - "-ObjC"
         SWIFT_VERSION: "5.0"
-        PRODUCT_BUNDLE_IDENTIFIER: com.joyigame.sdk.demo
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.joyigame.demo
+    dependencies:
+      - sdk: libc++.tbd
+      - sdk: libc++abi.tbd
+      - sdk: Accelerate.framework
   JoyigameSDKDemoIntegrationTests:
     type: bundle.unit-test
     platform: iOS
@@ -37,3 +43,15 @@ targets:
       - JoyigameSDKDemoIntegrationTests
     dependencies:
       - target: JoyigameSDKDemo
+schemes:
+  JoyigameSDKDemo:
+    build:
+      targets:
+        JoyigameSDKDemo: all
+        JoyigameSDKDemoIntegrationTests: [test]
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - JoyigameSDKDemoIntegrationTests

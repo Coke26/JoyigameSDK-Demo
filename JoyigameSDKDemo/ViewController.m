@@ -73,7 +73,7 @@
 
 - (void)handleActivationButtonTapped:(UIButton *)sender {
     if (!JOYDemoActivationConfigurationIsReady()) {
-        self.statusLabel.text = @"请先在 JoyigameSDKDemo/Info.plist 填写 JOYGameId 和 JOYAppKey";
+        self.statusLabel.text = @"请在 Info.plist 填写 JOYGameId 和 JOYAppKey";
         return;
     }
 

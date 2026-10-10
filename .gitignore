@@ -1,4 +1,8 @@
 Pods/
 Podfile.lock
-*.xcworkspace
+*.xcworkspace/
+xcuserdata/
 .DS_Store
+build/
+DerivedData/
+GoogleService-Info.plist
