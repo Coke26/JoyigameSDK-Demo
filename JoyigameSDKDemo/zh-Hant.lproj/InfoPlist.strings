@@ -1,3 +1,4 @@
 "NSCameraUsageDescription" = "用於拍攝並上傳圖片。";
 "NSPhotoLibraryUsageDescription" = "用於從照片圖庫選擇並上傳圖片。";
 "NSPhotoLibraryAddUsageDescription" = "用於將拍攝的圖片儲存到照片圖庫。";
+"NSUserTrackingUsageDescription" = "允許追蹤以衡量廣告成效和識別應用程式安裝來源。";

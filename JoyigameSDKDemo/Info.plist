@@ -48,6 +48,8 @@
 	<string>用于保存图片</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>用于选择上传的图片</string>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>允许跟踪以衡量广告效果和识别应用安装来源。</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UISupportedInterfaceOrientations</key>

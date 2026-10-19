@@ -1,19 +1,34 @@
 name: JoyigameSDKDemo
+fileGroups:
+  - AdjustProfiles
 options:
   bundleIdPrefix: com.example
   deploymentTarget:
-    iOS: "13.0"
+    iOS: "15.0"
 configs:
   Debug: debug
   Release: release
 settings:
   base:
     CLANG_ENABLE_OBJC_ARC: YES
-    IPHONEOS_DEPLOYMENT_TARGET: "13.0"
+    IPHONEOS_DEPLOYMENT_TARGET: "15.0"
 targets:
   JoyigameSDKDemo:
     type: application
     platform: iOS
+    preBuildScripts:
+      - name: Select and validate Adjust profile
+        basedOnDependencyAnalysis: false
+        script: |
+          set -eu
+          /usr/bin/python3 "$SRCROOT/tools/adjust_profiles.py" \
+            --profiles-dir "$SRCROOT/AdjustProfiles" \
+            --bundle-id "$PRODUCT_BUNDLE_IDENTIFIER" \
+            --configuration "$CONFIGURATION" \
+            --resources-dir "$TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH"
+        outputFiles:
+          - "$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/JoyiAdjustProfile.json"
+          - "$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/JoyiAdjustProfileSummary.json"
     sources:
       - JoyigameSDKDemo
     settings:
@@ -31,6 +46,7 @@ targets:
           - "$(inherited)"
           - "-ObjC"
         SWIFT_VERSION: "5.0"
+        ENABLE_USER_SCRIPT_SANDBOXING: NO
         PRODUCT_BUNDLE_IDENTIFIER: com.example.joyigame.demo
     dependencies:
       - sdk: libc++.tbd

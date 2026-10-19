@@ -1,3 +1,4 @@
 "NSCameraUsageDescription" = "We use the camera to take and upload photos.";
 "NSPhotoLibraryUsageDescription" = "We use your photo library to select and upload photos.";
 "NSPhotoLibraryAddUsageDescription" = "We use your photo library to save captured photos.";
+"NSUserTrackingUsageDescription" = "Allow tracking to measure advertising effectiveness and identify the source of app installs.";

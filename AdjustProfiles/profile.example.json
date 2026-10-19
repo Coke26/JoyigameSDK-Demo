@@ -1,0 +1,16 @@
+{
+  "bundleId": "com.example.game",
+  "appToken": "<ADJUST_APP_TOKEN>",
+  "eventTokens": {
+    "ad_complete_registration": "<ADJUST_EVENT_TOKEN>",
+    "ad_purchase": "<ADJUST_EVENT_TOKEN>",
+    "createrole": "<ADJUST_EVENT_TOKEN>",
+    "enter_game": "<ADJUST_EVENT_TOKEN>",
+    "first_open": "<ADJUST_EVENT_TOKEN>",
+    "first_purchase": "<ADJUST_EVENT_TOKEN>",
+    "purchase_failed": "<ADJUST_EVENT_TOKEN>",
+    "sdk_login_init": "<ADJUST_EVENT_TOKEN>",
+    "sdk_login_start": "<ADJUST_EVENT_TOKEN>",
+    "Initiate_payment": "<ADJUST_EVENT_TOKEN>"
+  }
+}
