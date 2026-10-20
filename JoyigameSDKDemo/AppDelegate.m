@@ -5,14 +5,26 @@
 #import "JOYDemoActivationConfig.h"
 #import <JoyigameSDK/JoyigameSDK.h>
 
+@interface AppDelegate ()
+@property (nonatomic, assign) BOOL didStartSDKActivation;
+@end
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    return YES;
+}
+
+- (UIWindow *)connectWindowScene:(UIWindowScene *)windowScene {
+    self.window = [[UIWindow alloc] initWithWindowScene:windowScene];
     self.window.rootViewController = [self buildRootTabBarController];
     [self.window makeKeyAndVisible];
-    [self startJoyigameSDKActivation];
-    return YES;
+    // Scene 重连时不重复激活；先创建登录页以注册切换通知，再启动 SDK。
+    if (!self.didStartSDKActivation) {
+        self.didStartSDKActivation = YES;
+        [self startJoyigameSDKActivation];
+    }
+    return self.window;
 }
 
 - (UITabBarController *)buildRootTabBarController {

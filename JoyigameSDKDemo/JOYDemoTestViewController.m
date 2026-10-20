@@ -34,7 +34,7 @@
 - (void)registerForAccountSwitchNotifications {
     if (self.observingAccountSwitch) return;
     self.observingAccountSwitch = YES;
-    // AppDelegate 会先创建所有 Tab，再启动 SDK；登录页尚未加载时也必须能接收内部切换。
+    // 场景连接时先创建所有 Tab，再启动 SDK；登录页尚未加载时也必须能接收内部切换。
     NSNotificationCenter *notifications = NSNotificationCenter.defaultCenter;
     JOYSDKCenter *center = JOYSDKCenter.sharedCenter;
     [notifications addObserver:self selector:@selector(handleSwitchAccountDidSucceed:)
