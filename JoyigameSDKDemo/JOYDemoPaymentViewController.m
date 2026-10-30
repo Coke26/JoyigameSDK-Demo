@@ -40,7 +40,7 @@
 
 - (NSArray<JOYDemoPaymentItem *> *)buildPaymentItems {
     return @[
-        [self itemWithDisplayName:@"6 元" productId:@"demo_product_6" appleProductId:@"com.example.demo.pay6" money:@6],
+        [self itemWithDisplayName:@"6 元" productId:@"demo_product_0" appleProductId:@"com.example.demo.pay0" money:@0.99],
         [self itemWithDisplayName:@"30 元" productId:@"demo_product_30" appleProductId:@"com.example.demo.pay30" money:@30],
         [self itemWithDisplayName:@"68 元" productId:@"demo_product_68" appleProductId:@"com.example.demo.pay68" money:@68],
         [self itemWithDisplayName:@"128 元" productId:@"demo_product_128" appleProductId:@"com.example.demo.pay128" money:@128],
@@ -56,7 +56,7 @@
     item.productId = productId;
     item.appleProductId = appleProductId;
     item.money = money;
-    item.currency = @"CNY";
+    item.currency = @"USD";
     return item;
 }
 
