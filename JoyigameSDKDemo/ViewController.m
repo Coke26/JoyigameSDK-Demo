@@ -6,6 +6,7 @@
 
 @property (nonatomic, strong) UILabel *statusLabel;
 @property (nonatomic, strong) UIButton *activateButton;
+@property (nonatomic, strong) UILabel *gameLanguageLabel;
 
 @end
 
@@ -51,24 +52,104 @@
     [self.activateButton setTitle:@"重新请求激活" forState:UIControlStateNormal];
     [self.activateButton addTarget:self action:@selector(handleActivationButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
 
+    UILabel *languageTitleLabel = [[UILabel alloc] init];
+    languageTitleLabel.text = @"游戏语言";
+    languageTitleLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleTitle2];
+    languageTitleLabel.adjustsFontForContentSizeCategory = YES;
+    languageTitleLabel.textColor = UIColor.labelColor;
+    languageTitleLabel.numberOfLines = 0;
+
+    self.gameLanguageLabel = [[UILabel alloc] init];
+    self.gameLanguageLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    self.gameLanguageLabel.adjustsFontForContentSizeCategory = YES;
+    self.gameLanguageLabel.textColor = UIColor.labelColor;
+    self.gameLanguageLabel.numberOfLines = 0;
+    [self showGameLanguage:[JOYSDKCenter.sharedCenter getGameLanguage] action:@"当前游戏语言"];
+
+    UILabel *languageHintLabel = [[UILabel alloc] init];
+    languageHintLabel.text = @"设置后重启仍保留；未设置时按设备语言返回，不支持的语言默认 us。仅保存游戏语言选择，不切换 SDK 界面文案。";
+    languageHintLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleFootnote];
+    languageHintLabel.adjustsFontForContentSizeCategory = YES;
+    languageHintLabel.textColor = UIColor.secondaryLabelColor;
+    languageHintLabel.numberOfLines = 0;
+
+    UIButton *getLanguageButton = [self gameLanguageButtonWithTitle:@"获取当前游戏语言" action:@selector(handleGetGameLanguage:)];
+    NSMutableArray<UIButton *> *setLanguageButtons = [NSMutableArray array];
+    for (NSArray<NSString *> *item in @[@[@"us", @"设置为英文（us）"],
+                                        @[@"vn", @"设置为越南语（vn）"],
+                                        @[@"th", @"设置为泰语（th）"]]) {
+        UIButton *button = [self gameLanguageButtonWithTitle:item[1] action:@selector(handleSetGameLanguage:)];
+        button.accessibilityIdentifier = [@"demo.gameLanguage.set." stringByAppendingString:item[0]];
+        button.tag = setLanguageButtons.count;
+        [setLanguageButtons addObject:button];
+    }
+    getLanguageButton.accessibilityIdentifier = @"demo.gameLanguage.get";
+
     UIStackView *stackView = [[UIStackView alloc] initWithArrangedSubviews:@[
         titleLabel,
         paramsLabel,
         self.statusLabel,
-        self.activateButton
+        self.activateButton,
+        languageTitleLabel,
+        self.gameLanguageLabel,
+        languageHintLabel,
+        getLanguageButton
     ]];
     stackView.translatesAutoresizingMaskIntoConstraints = NO;
     stackView.axis = UILayoutConstraintAxisVertical;
     stackView.spacing = 16.0;
     stackView.alignment = UIStackViewAlignmentFill;
-    [self.view addSubview:stackView];
+    for (UIButton *button in setLanguageButtons) [stackView addArrangedSubview:button];
+    [stackView setCustomSpacing:32.0 afterView:self.activateButton];
+
+    UIScrollView *scrollView = [[UIScrollView alloc] init];
+    scrollView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:scrollView];
+    [scrollView addSubview:stackView];
 
     UILayoutGuide *safeArea = self.view.safeAreaLayoutGuide;
     [NSLayoutConstraint activateConstraints:@[
-        [stackView.leadingAnchor constraintEqualToAnchor:safeArea.leadingAnchor constant:24.0],
-        [stackView.trailingAnchor constraintEqualToAnchor:safeArea.trailingAnchor constant:-24.0],
-        [stackView.topAnchor constraintEqualToAnchor:safeArea.topAnchor constant:48.0],
+        [scrollView.leadingAnchor constraintEqualToAnchor:safeArea.leadingAnchor],
+        [scrollView.trailingAnchor constraintEqualToAnchor:safeArea.trailingAnchor],
+        [scrollView.topAnchor constraintEqualToAnchor:safeArea.topAnchor],
+        [scrollView.bottomAnchor constraintEqualToAnchor:safeArea.bottomAnchor],
+        [stackView.leadingAnchor constraintEqualToAnchor:scrollView.contentLayoutGuide.leadingAnchor constant:24.0],
+        [stackView.trailingAnchor constraintEqualToAnchor:scrollView.contentLayoutGuide.trailingAnchor constant:-24.0],
+        [stackView.topAnchor constraintEqualToAnchor:scrollView.contentLayoutGuide.topAnchor constant:24.0],
+        [stackView.bottomAnchor constraintEqualToAnchor:scrollView.contentLayoutGuide.bottomAnchor constant:-24.0],
+        [stackView.widthAnchor constraintEqualToAnchor:scrollView.frameLayoutGuide.widthAnchor constant:-48.0],
     ]];
+}
+
+- (UIButton *)gameLanguageButtonWithTitle:(NSString *)title action:(SEL)action {
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+    [button setTitle:title forState:UIControlStateNormal];
+    button.titleLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    button.titleLabel.adjustsFontForContentSizeCategory = YES;
+    button.titleLabel.numberOfLines = 0;
+    button.titleLabel.textAlignment = NSTextAlignmentCenter;
+    button.contentEdgeInsets = UIEdgeInsetsMake(8, 8, 8, 8);
+    [button.heightAnchor constraintGreaterThanOrEqualToConstant:44.0].active = YES;
+    [button addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
+    return button;
+}
+
+- (void)showGameLanguage:(NSString *)language action:(NSString *)action {
+    NSDictionary<NSString *, NSString *> *names = @{@"us": @"英文", @"vn": @"越南语", @"th": @"泰语"};
+    self.gameLanguageLabel.text = [NSString stringWithFormat:@"%@：%@（%@）", action, language, names[language] ?: @""];
+}
+
+- (void)handleGetGameLanguage:(UIButton *)sender {
+    NSString *language = [JOYSDKCenter.sharedCenter getGameLanguage];
+    [self showGameLanguage:language action:@"获取返回"];
+    NSLog(@"[JoyigameSDKDemo] getGameLanguage -> %@", language);
+}
+
+- (void)handleSetGameLanguage:(UIButton *)sender {
+    NSString *language = @[@"us", @"vn", @"th"][sender.tag];
+    NSString *applied = [JOYSDKCenter.sharedCenter setGameLanguage:language];
+    [self showGameLanguage:applied action:@"设置返回"];
+    NSLog(@"[JoyigameSDKDemo] setGameLanguage:%@ -> %@", language, applied);
 }
 
 - (void)handleActivationButtonTapped:(UIButton *)sender {
